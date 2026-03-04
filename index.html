@@ -5,7 +5,43 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SayItUp - Master English Phrasal Verbs</title>
     <meta name="description" content="Learn English phrasal verbs the smart way with SayItUp. Interactive lessons, real-world examples, and practice exercises to boost your fluency.">
+    <link rel="canonical" href="https://sayitup.getgrowly.co/">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#2563eb">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="SayItUp - Master English Phrasal Verbs">
+    <meta property="og:description" content="Build fluency with spaced review, challenge quizzes, streak tracking, and real-world phrasal verb practice.">
+    <meta property="og:url" content="https://sayitup.getgrowly.co/">
+    <meta property="og:image" content="https://sayitup.getgrowly.co/app-home-960.webp">
+    <meta property="og:image:alt" content="SayItUp app preview">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="SayItUp - Master English Phrasal Verbs">
+    <meta name="twitter:description" content="Learn and retain phrasal verbs with spaced repetition, weak-word review, and daily practice.">
+    <meta name="twitter:image" content="https://sayitup.getgrowly.co/app-home-960.webp">
+    <meta name="apple-itunes-app" content="app-id=6757407594, app-argument=https://sayitup.getgrowly.co/">
+    <link rel="icon" type="image/png" sizes="32x32" href="sayitup-logo-32.png">
+    <link rel="preload" as="image" href="app-home-960.webp" imagesrcset="app-home-480.webp 480w, app-home-960.webp 960w" imagesizes="(max-width: 1024px) 70vw, 460px">
     <script src="https://cdn.tailwindcss.com"></script>
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "SoftwareApplication",
+            "name": "SayItUp",
+            "applicationCategory": "EducationalApplication",
+            "operatingSystem": "iOS, Android",
+            "url": "https://sayitup.getgrowly.co/",
+            "description": "SayItUp helps learners master English phrasal verbs with spaced repetition, quizzes, and progress tracking.",
+            "offers": {
+                "@type": "Offer",
+                "price": "0",
+                "priceCurrency": "USD"
+            },
+            "downloadUrl": [
+                "https://apps.apple.com/us/app/sayitup-learn-phrasal-verbs/id6757407594",
+                "https://play.google.com/store/apps/details?id=co.getgrowly.sayitup"
+            ]
+        }
+    </script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700;800&display=swap');
         
@@ -53,23 +89,50 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex items-center justify-between h-16">
                 <div class="flex items-center gap-2">
-                    <img src="sayitip.png" width="32" height="32" alt="SayItUp logo" class="w-8 h-8 rounded-xl" decoding="async">
+                    <img src="sayitup-logo-32.png" width="32" height="32" alt="SayItUp logo" class="w-8 h-8 rounded-xl" decoding="async">
                     <span class="text-2xl font-bold gradient-text">SayItUp</span>
                 </div>
                 <div class="hidden md:flex items-center gap-8">
                     <a href="#features" class="text-gray-600 hover:text-blue-600 transition-colors">Features</a>
+                    <a href="#inside-app" class="text-gray-600 hover:text-blue-600 transition-colors">In-App</a>
                     <a href="#how-it-works" class="text-gray-600 hover:text-blue-600 transition-colors">How It Works</a>
                     <a href="#testimonials" class="text-gray-600 hover:text-blue-600 transition-colors">Testimonials</a>
                     <a href="#download" class="bg-blue-600 text-white px-6 py-2 rounded-full hover:bg-blue-700 transition-colors font-medium">Get Started</a>
                 </div>
-                <button class="md:hidden p-2">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <button id="mobile-menu-button" class="md:hidden p-2 text-gray-700 hover:text-blue-600 transition-colors" aria-expanded="false" aria-controls="mobile-menu" aria-label="Toggle navigation menu">
+                    <svg id="mobile-menu-open-icon" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                    </svg>
+                    <svg id="mobile-menu-close-icon" class="w-6 h-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
                     </svg>
                 </button>
             </div>
+            <div id="mobile-menu" class="md:hidden hidden border-t border-gray-200 py-4">
+                <div class="flex flex-col gap-3">
+                    <a href="#features" class="text-gray-700 hover:text-blue-600 transition-colors">Features</a>
+                    <a href="#inside-app" class="text-gray-700 hover:text-blue-600 transition-colors">In-App</a>
+                    <a href="#how-it-works" class="text-gray-700 hover:text-blue-600 transition-colors">How It Works</a>
+                    <a href="#testimonials" class="text-gray-700 hover:text-blue-600 transition-colors">Testimonials</a>
+                    <a href="#download" class="bg-blue-600 text-white px-5 py-2 rounded-full hover:bg-blue-700 transition-colors font-medium w-fit">Get Started</a>
+                </div>
+            </div>
         </div>
     </nav>
+
+    <div id="mobile-app-banner" class="hidden md:hidden fixed bottom-4 left-4 right-4 z-50">
+        <div class="bg-gray-900/95 text-white rounded-2xl p-3 shadow-2xl backdrop-blur-sm border border-gray-700">
+            <div class="flex items-center gap-3">
+                <img src="sayitup-logo-32.png" width="32" height="32" alt="SayItUp logo" class="w-8 h-8 rounded-lg" decoding="async">
+                <div class="min-w-0 flex-1">
+                    <p class="text-sm font-semibold leading-tight">Continue in SayItUp</p>
+                    <p id="mobile-app-banner-subtitle" class="text-xs text-gray-300 leading-tight">Open the app for daily practice and streaks.</p>
+                </div>
+                <a id="mobile-app-banner-cta" href="#" class="bg-blue-500 hover:bg-blue-400 text-white text-xs font-semibold px-3 py-2 rounded-lg whitespace-nowrap transition-colors">Open App</a>
+                <button id="mobile-app-banner-close" class="text-gray-300 hover:text-white text-xl leading-none px-1" aria-label="Dismiss app banner">&times;</button>
+            </div>
+        </div>
+    </div>
 
     <!-- Hero Section -->
     <section class="hero-gradient pt-32 pb-20 px-4 sm:px-6 lg:px-8">
@@ -116,7 +179,10 @@
                 </div>
                 <div class="relative hidden lg:flex justify-center lg:justify-end">
                     <div class="animate-float w-full max-w-[420px] xl:max-w-[460px]">
-                        <img src="app-home.png" alt="SayItUp app home screen" class="rounded-3xl shadow-2xl w-full h-auto object-contain" loading="lazy" decoding="async">
+                        <picture>
+                            <source type="image/webp" srcset="app-home-480.webp 480w, app-home-960.webp 960w" sizes="(max-width: 1280px) 420px, 460px">
+                            <img src="app-home-960.png" srcset="app-home-480.png 480w, app-home-960.png 960w" sizes="(max-width: 1280px) 420px, 460px" alt="SayItUp app home screen" class="rounded-3xl shadow-2xl w-full h-auto object-contain" loading="eager" fetchpriority="high" decoding="async">
+                        </picture>
                     </div>
                 </div>
             </div>
@@ -149,7 +215,7 @@
                         </svg>
                     </div>
                     <h3 class="text-2xl font-bold mb-3">Smart Learning</h3>
-                    <p class="text-gray-600 leading-relaxed">AI-powered algorithm adapts to your learning pace and focuses on verbs you need to practice most.</p>
+                    <p class="text-gray-600 leading-relaxed">Spaced-repetition scheduling (SM-2 inspired) adapts review timing and focuses on verbs you miss most often.</p>
                 </div>
 
                 <div class="bg-white p-8 rounded-2xl border-2 border-gray-100 card-hover">
@@ -195,6 +261,50 @@
         </div>
     </section>
 
+    <!-- In-App Features Section -->
+    <section id="inside-app" class="py-20 px-4 sm:px-6 lg:px-8 bg-blue-50/40">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl sm:text-5xl font-bold mb-4 text-balance">What You Actually Get In The App</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto text-pretty">The landing page now reflects real product capabilities available in SayItUp today.</p>
+            </div>
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="bg-white border border-gray-200 rounded-2xl p-6">
+                    <h3 class="font-bold text-lg mb-2">Weak Words Review</h3>
+                    <p class="text-gray-600 text-sm leading-relaxed">Automatically surfaces verbs you struggle with so revision is focused and efficient.</p>
+                </div>
+                <div class="bg-white border border-gray-200 rounded-2xl p-6">
+                    <h3 class="font-bold text-lg mb-2">Favorites</h3>
+                    <p class="text-gray-600 text-sm leading-relaxed">Save important phrasal verbs into a personal list for quick practice later.</p>
+                </div>
+                <div class="bg-white border border-gray-200 rounded-2xl p-6">
+                    <h3 class="font-bold text-lg mb-2">Challenge Quiz</h3>
+                    <p class="text-gray-600 text-sm leading-relaxed">Timed and mixed-format drills help you test retention under pressure.</p>
+                </div>
+                <div class="bg-white border border-gray-200 rounded-2xl p-6">
+                    <h3 class="font-bold text-lg mb-2">Streak + Achievements</h3>
+                    <p class="text-gray-600 text-sm leading-relaxed">Track consistency with streak counters and milestone badges.</p>
+                </div>
+                <div class="bg-white border border-gray-200 rounded-2xl p-6">
+                    <h3 class="font-bold text-lg mb-2">Daily Reminders</h3>
+                    <p class="text-gray-600 text-sm leading-relaxed">Optional push reminders keep your study routine consistent.</p>
+                </div>
+                <div class="bg-white border border-gray-200 rounded-2xl p-6">
+                    <h3 class="font-bold text-lg mb-2">Progress Timeline</h3>
+                    <p class="text-gray-600 text-sm leading-relaxed">See mastery trends and review history over time.</p>
+                </div>
+                <div class="bg-white border border-gray-200 rounded-2xl p-6">
+                    <h3 class="font-bold text-lg mb-2">Subscription Center</h3>
+                    <p class="text-gray-600 text-sm leading-relaxed">Manage plans and billing from your store/customer center settings.</p>
+                </div>
+                <div class="bg-white border border-gray-200 rounded-2xl p-6">
+                    <h3 class="font-bold text-lg mb-2">Account Deletion</h3>
+                    <p class="text-gray-600 text-sm leading-relaxed">Delete account and associated data from in-app settings or support.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- How It Works Section -->
     <section id="how-it-works" class="py-20 px-4 sm:px-6 lg:px-8 bg-gray-50">
         <div class="max-w-7xl mx-auto">
@@ -230,7 +340,7 @@
         <div class="max-w-7xl mx-auto">
             <div class="text-center mb-16">
                 <h2 class="text-4xl sm:text-5xl font-bold mb-4 text-balance">Loved by Learners Worldwide</h2>
-                <p class="text-xl text-gray-600 max-w-2xl mx-auto text-pretty">Join thousands of students improving their English fluency</p>
+                <p class="text-xl text-gray-600 max-w-2xl mx-auto text-pretty">Feedback from learners and teachers using SayItUp regularly</p>
             </div>
             
             <div class="grid md:grid-cols-3 gap-8">
@@ -293,24 +403,53 @@
         </div>
     </section>
 
+    <!-- Product Evidence Section -->
+    <section class="py-20 px-4 sm:px-6 lg:px-8 bg-gray-50">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl sm:text-5xl font-bold mb-4 text-balance">Store Listings and Real Screens</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto text-pretty">Check official store pages and current in-app screens before downloading.</p>
+            </div>
+            <div class="grid lg:grid-cols-2 gap-6 mb-8">
+                <a href="https://apps.apple.com/us/app/sayitup-learn-phrasal-verbs/id6757407594" target="_blank" rel="noopener noreferrer" class="bg-white border-2 border-gray-200 rounded-2xl p-6 hover:border-blue-400 transition-colors">
+                    <p class="text-sm uppercase tracking-wide text-blue-600 font-semibold mb-2">Official Listing</p>
+                    <h3 class="text-2xl font-bold mb-2">Apple App Store</h3>
+                    <p class="text-gray-600">Open the iOS listing to view current screenshots, reviews, and release info.</p>
+                </a>
+                <a href="https://play.google.com/store/apps/details?id=co.getgrowly.sayitup" target="_blank" rel="noopener noreferrer" class="bg-white border-2 border-gray-200 rounded-2xl p-6 hover:border-blue-400 transition-colors">
+                    <p class="text-sm uppercase tracking-wide text-blue-600 font-semibold mb-2">Official Listing</p>
+                    <h3 class="text-2xl font-bold mb-2">Google Play Store</h3>
+                    <p class="text-gray-600">Open the Android listing to view current screenshots, ratings, and release info.</p>
+                </a>
+            </div>
+            <div class="grid sm:grid-cols-2 lg:grid-cols-5 gap-4">
+                <img src="images/sayitup-screen-01.jpeg" alt="SayItUp app screenshot 1" class="rounded-xl border border-gray-200 w-full h-auto" loading="lazy" decoding="async">
+                <img src="images/sayitup-screen-02.jpeg" alt="SayItUp app screenshot 2" class="rounded-xl border border-gray-200 w-full h-auto" loading="lazy" decoding="async">
+                <img src="images/sayitup-screen-03.jpeg" alt="SayItUp app screenshot 3" class="rounded-xl border border-gray-200 w-full h-auto" loading="lazy" decoding="async">
+                <img src="images/sayitup-screen-04.jpeg" alt="SayItUp app screenshot 4" class="rounded-xl border border-gray-200 w-full h-auto" loading="lazy" decoding="async">
+                <img src="images/sayitup-screen-05.jpeg" alt="SayItUp app screenshot 5" class="rounded-xl border border-gray-200 w-full h-auto" loading="lazy" decoding="async">
+            </div>
+        </div>
+    </section>
+
     <!-- Download CTA Section -->
     <section id="download" class="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-blue-600 to-purple-700 text-white">
         <div class="max-w-4xl mx-auto text-center">
             <h2 class="text-4xl sm:text-5xl font-bold mb-6 text-balance">Start Your Journey Today</h2>
-            <p class="text-xl mb-10 text-blue-100 leading-relaxed text-pretty">Join thousands of learners mastering English phrasal verbs with SayItUp. Download now and get your first week free!</p>
+            <p class="text-xl mb-10 text-blue-100 leading-relaxed text-pretty">Build daily fluency with structured review, challenge quizzes, and real conversational examples. Download now and start free.</p>
             <div class="flex flex-col sm:flex-row gap-4 justify-center mb-8">
-                <span class="bg-white text-blue-600 px-8 py-4 rounded-full transition-colors font-semibold text-lg shadow-lg inline-flex items-center justify-center gap-2 opacity-60 cursor-not-allowed pointer-events-none select-none" role="link" aria-disabled="true" tabindex="-1">
+                <a href="https://apps.apple.com/us/app/sayitup-learn-phrasal-verbs/id6757407594" target="_blank" rel="noopener noreferrer" class="bg-white text-blue-600 px-8 py-4 rounded-full transition-colors font-semibold text-lg shadow-lg inline-flex items-center justify-center gap-2 hover:bg-blue-50">
                     <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
                         <path d="M17.05 20.28c-.98.95-2.05.8-3.08.35-1.09-.46-2.09-.48-3.24 0-1.44.62-2.2.44-3.06-.35C2.79 15.25 3.51 7.59 9.05 7.31c1.35.07 2.29.74 3.08.8 1.18-.24 2.31-.93 3.57-.84 1.51.12 2.65.72 3.4 1.8-3.12 1.87-2.38 5.98.48 7.13-.57 1.5-1.31 2.99-2.54 4.09l.01-.01zM12.03 7.25c-.15-2.23 1.66-4.07 3.74-4.25.29 2.58-2.34 4.5-3.74 4.25z"/>
                     </svg>
                     App Store
-                </span>
-                <span class="bg-white text-blue-600 px-8 py-4 rounded-full transition-colors font-semibold text-lg shadow-lg inline-flex items-center justify-center gap-2 opacity-60 cursor-not-allowed pointer-events-none select-none" role="link" aria-disabled="true" tabindex="-1">
+                </a>
+                <a href="https://play.google.com/store/apps/details?id=co.getgrowly.sayitup" target="_blank" rel="noopener noreferrer" class="bg-white text-blue-600 px-8 py-4 rounded-full transition-colors font-semibold text-lg shadow-lg inline-flex items-center justify-center gap-2 hover:bg-blue-50">
                     <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
                         <path d="M3,20.5V3.5C3,2.91 3.34,2.39 3.84,2.15L13.69,12L3.84,21.85C3.34,21.6 3,21.09 3,20.5M16.81,15.12L6.05,21.34L14.54,12.85L16.81,15.12M20.16,10.81C20.5,11.08 20.75,11.5 20.75,12C20.75,12.5 20.53,12.9 20.18,13.18L17.89,14.5L15.39,12L17.89,9.5L20.16,10.81M6.05,2.66L16.81,8.88L14.54,11.15L6.05,2.66Z"/>
                     </svg>
                     Google Play
-                </span>
+                </a>
             </div>
             <p class="text-sm text-blue-200">Available on iOS and Android • No credit card required</p>
         </div>
@@ -322,7 +461,7 @@
             <div class="grid md:grid-cols-4 gap-8 mb-8">
                 <div>
                     <div class="flex items-center gap-2 mb-4">
-                        <img src="sayitip.png" width="32" height="32" alt="SayItUp logo" class="w-8 h-8 rounded-xl" decoding="async">
+                        <img src="sayitup-logo-32.png" width="32" height="32" alt="SayItUp logo" class="w-8 h-8 rounded-xl" decoding="async">
                         <span class="text-2xl font-bold">SayItUp</span>
                     </div>
                     <p class="text-gray-400 text-sm leading-relaxed">Master English phrasal verbs with confidence and ease.</p>
@@ -343,15 +482,15 @@
                     <ul class="space-y-2 text-sm">
                         <li><a href="privacy.html" class="text-gray-400 hover:text-white transition-colors">Privacy Policy</a></li>
                         <li><a href="terms.html" class="text-gray-400 hover:text-white transition-colors">Terms of Service</a></li>
-                        <li><span class="text-gray-400 opacity-60 cursor-not-allowed select-none" role="link" aria-disabled="true" tabindex="-1">Cookie Policy</span></li>
+                        <li><a href="cookie-policy.html" class="text-gray-400 hover:text-white transition-colors">Cookie Policy</a></li>
                     </ul>
                 </div>
                 
                 <div>
                     <h4 class="font-semibold mb-4">Connect</h4>
                     <ul class="space-y-2 text-sm">
-                        <li><a href="mailto:tech@getgrowly.co" class="text-gray-400 hover:text-white transition-colors">Contact Us</a></li>
-                        <li><a href="mailto:tech@getgrowly.co" class="text-gray-400 hover:text-white transition-colors">Support</a></li>
+                        <li><a href="mailto:support@sayitup.app" class="text-gray-400 hover:text-white transition-colors">Contact Us</a></li>
+                        <li><a href="mailto:support@sayitup.app" class="text-gray-400 hover:text-white transition-colors">Support</a></li>
                         <li><span class="text-gray-400 opacity-60 cursor-not-allowed select-none" role="link" aria-disabled="true" tabindex="-1">Blog</span></li>
                     </ul>
                     <div class="flex gap-3 mt-4">
@@ -369,9 +508,112 @@
             </div>
             
             <div class="border-t border-gray-800 pt-8 text-center text-sm text-gray-400">
-                <p>&copy; 2025 SayItUp. All rights reserved.</p>
+                <p>&copy; 2026 SayItUp. All rights reserved.</p>
             </div>
         </div>
     </footer>
+    <script>
+        (() => {
+            const menuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+            const openIcon = document.getElementById('mobile-menu-open-icon');
+            const closeIcon = document.getElementById('mobile-menu-close-icon');
+
+            if (!menuButton || !mobileMenu || !openIcon || !closeIcon) {
+                return;
+            }
+
+            const closeMenu = () => {
+                mobileMenu.classList.add('hidden');
+                openIcon.classList.remove('hidden');
+                closeIcon.classList.add('hidden');
+                menuButton.setAttribute('aria-expanded', 'false');
+            };
+
+            const openMenu = () => {
+                mobileMenu.classList.remove('hidden');
+                openIcon.classList.add('hidden');
+                closeIcon.classList.remove('hidden');
+                menuButton.setAttribute('aria-expanded', 'true');
+            };
+
+            menuButton.addEventListener('click', () => {
+                if (mobileMenu.classList.contains('hidden')) {
+                    openMenu();
+                    return;
+                }
+                closeMenu();
+            });
+
+            mobileMenu.querySelectorAll('a').forEach((link) => {
+                link.addEventListener('click', closeMenu);
+            });
+
+            document.addEventListener('keydown', (event) => {
+                if (event.key === 'Escape') {
+                    closeMenu();
+                }
+            });
+
+            window.addEventListener('resize', () => {
+                if (window.innerWidth >= 768) {
+                    closeMenu();
+                }
+            });
+        })();
+
+        (() => {
+            const banner = document.getElementById('mobile-app-banner');
+            const cta = document.getElementById('mobile-app-banner-cta');
+            const closeBtn = document.getElementById('mobile-app-banner-close');
+            const subtitle = document.getElementById('mobile-app-banner-subtitle');
+            const dismissedKey = 'sayitup_mobile_banner_dismissed_until';
+            const appStoreUrl = 'https://apps.apple.com/us/app/sayitup-learn-phrasal-verbs/id6757407594';
+            const playStoreUrl = 'https://play.google.com/store/apps/details?id=co.getgrowly.sayitup';
+
+            if (!banner || !cta || !closeBtn || !subtitle) {
+                return;
+            }
+
+            const ua = navigator.userAgent || '';
+            const isIOS = /iPhone|iPad|iPod/i.test(ua);
+            const isAndroid = /Android/i.test(ua);
+            const isMobile = isIOS || isAndroid;
+            let dismissedUntil = 0;
+            try {
+                dismissedUntil = Number(localStorage.getItem(dismissedKey) || '0');
+            } catch (error) {
+                dismissedUntil = 0;
+            }
+
+            if (!isMobile || Date.now() < dismissedUntil) {
+                return;
+            }
+
+            if (isIOS) {
+                cta.href = appStoreUrl;
+                cta.textContent = 'Open on App Store';
+                subtitle.textContent = 'Install or open SayItUp on iPhone.';
+            } else {
+                cta.href = playStoreUrl;
+                cta.textContent = 'Open on Google Play';
+                subtitle.textContent = 'Install or open SayItUp on Android.';
+            }
+
+            cta.target = '_blank';
+            cta.rel = 'noopener noreferrer';
+            banner.classList.remove('hidden');
+
+            closeBtn.addEventListener('click', () => {
+                const sevenDaysMs = 7 * 24 * 60 * 60 * 1000;
+                try {
+                    localStorage.setItem(dismissedKey, String(Date.now() + sevenDaysMs));
+                } catch (error) {
+                    // Ignore storage errors and still close the banner.
+                }
+                banner.classList.add('hidden');
+            });
+        })();
+    </script>
 </body>
 </html>
